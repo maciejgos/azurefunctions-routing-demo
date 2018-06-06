@@ -12,7 +12,7 @@ namespace RoutingDemo
     public static class GetTask
     {
         [FunctionName("GetTask")]
-        public static IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "api/gettask/{project:alpha}/task/{id:int}")]HttpRequest req, string project, int id, TraceWriter log)
+        public static IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "gettask/{project:alpha}/task/{id:int}")]HttpRequest req, string project, int id, TraceWriter log)
         {
             log.Info($"C# HTTP trigger function processed a request. Project: {project}; Task Id: {id}");
 
